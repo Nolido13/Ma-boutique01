@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nom": "Sac à main croco doré",
+    "prix": 89000,
+    "categorie": "sacs",
+    "nouveaute": true,
+    "description": "Sac à main élégant en cuir synthétique motif croco, doré mat. Parfait pour toutes les occasions.",
+    "image": "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 2,
+    "nom": "Collier perles dorées",
+    "prix": 24500,
+    "categorie": "bijoux",
+    "nouveaute": true,
+    "description": "Collier de perles dorées fait main, longueur réglable. Élégance naturelle.",
+    "image": "https://images.pexels.com/photos/248077/pexels-photo-248077.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 3,
+    "nom": "Foulard soie imprimé",
+    "prix": 18000,
+    "categorie": "foulards",
+    "nouveaute": false,
+    "description": "Foulard en soie légère aux motifs géométriques, polyvalent et chic.",
+    "image": "https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 4,
+    "nom": "Lunettes soleil cat-eye",
+    "prix": 32000,
+    "categorie": "lunettes",
+    "nouveaute": true,
+    "description": "Monture cat-eye vintage avec verres UV400. Style rétro intemporel.",
+    "image": "https://images.pexels.com/photos/701877/pexels-photo-701877.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 5,
+    "nom": "Bracelet jonc argenté",
+    "prix": 15500,
+    "categorie": "bijoux",
+    "nouveaute": false,
+    "description": "Bracelet jonc en acier inoxydable argenté, minimaliste et résistant.",
+    "image": "https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 6,
+    "nom": "Sac pochette velours",
+    "prix": 42000,
+    "categorie": "sacs",
+    "nouveaute": true,
+    "description": "Pochette en velours bordeaux avec chaîne dorée. Idéale pour les soirées.",
+    "image": "https://images.pexels.com/photos/904350/pexels-photo-904350.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 7,
+    "nom": "Ceinture cuir tressé",
+    "prix": 22000,
+    "categorie": "foulards",
+    "nouveaute": false,
+    "description": "Ceinture en cuir véritable tressé, boucle dorée. Finition artisanale.",
+    "image": "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 8,
+    "nom": "Montre dorée minimaliste",
+    "prix": 67000,
+    "categorie": "lunettes",
+    "nouveaute": true,
+    "description": "Montre à quartz cadran blanc, bracelet cuir camel. Design épuré et moderne.",
+    "image": "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=600"
+  }
+]
