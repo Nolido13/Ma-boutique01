@@ -59,7 +59,9 @@ export default function Navbar({ cartCount, cartItems }) {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-xs text-tertiary">Appels</span>
-                    <span className="text-base font-semibold">229 48 22 59 22</span>
+                    <a href="tel:+2290148225922" className="text-base font-semibold hover:text-secondary transition-colors">
+                      229 01 48 22 59 22
+                    </a>
                   </div>
                 </div>
               </div>
@@ -71,7 +73,7 @@ export default function Navbar({ cartCount, cartItems }) {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-xs text-tertiary">Boutique Calavi</span>
-                    <span className="text-sm font-medium">Tankpè Von - Face école primaire</span>
+                    <span className="text-sm font-medium">Tankpè Von - Face école primaire "Les génies"</span>
                   </div>
                 </div>
                 
@@ -100,9 +102,9 @@ export default function Navbar({ cartCount, cartItems }) {
             {/* Version Tablette */}
             <div className="hidden md:flex lg:hidden flex-col gap-2">
               <div className="flex items-center justify-center gap-3 flex-wrap">
-                <a href="https://wa.me/22948225922" className="flex items-center gap-1 text-sm">
+                <a href="https://wa.me/2290148225922" className="flex items-center gap-1 text-sm">
                   <i className="fab fa-whatsapp text-green-400"></i>
-                  <span>229 48 22 59 22</span>
+                  <span>229 01 48 22 59 22</span>
                 </a>
                 <span className="text-white/30">|</span>
                 <a href="https://wa.me/22962724401" className="flex items-center gap-1 text-sm">
@@ -110,10 +112,10 @@ export default function Navbar({ cartCount, cartItems }) {
                   <span>229 62 72 44 01</span>
                 </a>
                 <span className="text-white/30">|</span>
-                <div className="flex items-center gap-1 text-sm">
+                <a href="tel:+2290148225922" className="flex items-center gap-1 text-sm">
                   <i className="fas fa-phone-alt text-secondary"></i>
-                  <span>229 48 22 59 22</span>
-                </div>
+                  <span>229 01 48 22 59 22</span>
+                </a>
               </div>
               <div className="flex items-center justify-center gap-3 flex-wrap text-xs">
                 <div className="flex items-center gap-1">
@@ -137,24 +139,24 @@ export default function Navbar({ cartCount, cartItems }) {
             <div className="md:hidden">
               <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-center gap-3">
-                  <a href="https://wa.me/22948225922" className="flex items-center gap-1.5 bg-green-500/15 px-2.5 py-1 rounded-full">
+                  <a href="https://wa.me/2290148225922" className="flex items-center gap-1.5 bg-green-500/15 px-2.5 py-1 rounded-full">
                     <i className="fab fa-whatsapp text-green-400 text-xs"></i>
-                    <span className="text-xs font-medium">48 22 59 22</span>
+                    <span className="text-xs font-medium">01 48 22 59 22</span>
                   </a>
                   <a href="https://wa.me/22962724401" className="flex items-center gap-1.5 bg-green-500/15 px-2.5 py-1 rounded-full">
                     <i className="fab fa-whatsapp text-green-400 text-xs"></i>
                     <span className="text-xs font-medium">62 72 44 01</span>
                   </a>
-                  <div className="flex items-center gap-1.5 bg-secondary/15 px-2.5 py-1 rounded-full">
+                  <a href="tel:+2290148225922" className="flex items-center gap-1.5 bg-secondary/15 px-2.5 py-1 rounded-full">
                     <i className="fas fa-phone-alt text-secondary text-xs"></i>
-                    <span className="text-xs font-medium">48 22 59 22</span>
-                  </div>
+                    <span className="text-xs font-medium">01 48 22 59 22</span>
+                  </a>
                 </div>
                 
                 <div className="flex items-start gap-1.5 justify-center">
                   <i className="fas fa-map-marker-alt text-secondary text-xs mt-0.5"></i>
                   <span className="text-xs text-center leading-tight">
-                    Calavi: Tankpè Von (face école primaire)
+                    Calavi: Tankpè Von (face école primaire "Les génies")
                   </span>
                 </div>
                 
@@ -306,7 +308,7 @@ export default function Navbar({ cartCount, cartItems }) {
                   <span className="text-lg sm:text-xl font-serif text-secondary">{total.toLocaleString()} FCFA</span>
                 </div>
                 <a
-                  href={`https://wa.me/22948225922?text=${encodeURIComponent(
+                  href={`https://wa.me/2290148225922?text=${encodeURIComponent(
                     'Commande DEDSHOP Market\n\n' +
                     cartItems.map(i => `- ${i.nom} x${i.qty} = ${(i.prix * i.qty).toLocaleString()} FCFA`).join('\n') +
                     `\n\nTotal : ${total.toLocaleString()} FCFA`

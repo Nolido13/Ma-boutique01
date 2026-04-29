@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
+import CallButton from './components/CallButton'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import About from './pages/About'
@@ -36,6 +37,7 @@ function App() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <CallButton />
     </div>
   )
 }
