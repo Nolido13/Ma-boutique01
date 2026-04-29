@@ -13,9 +13,10 @@
 
   body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #ffffff 0%, #fefcf9 100%);
-    color: #1a1a1a;
+    background: linear-gradient(135deg, #5c2e27 0%, #ff5e08 50%, #fdbd9e 100%);
+    color: #ffffff;
     scroll-behavior: smooth;
+    min-height: 100vh;
   }
 
   img {
@@ -25,25 +26,23 @@
 }
 
 @layer utilities {
-  /* Scrollbar personnalisée */
   ::-webkit-scrollbar {
     width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #fdbd9e;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #c9a96e;
+    background: #5c2e27;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #a8884e;
+    background: #ff5e08;
   }
 
-  /* Line clamp */
   .line-clamp-1 {
     display: -webkit-box;
     -webkit-line-clamp: 1;

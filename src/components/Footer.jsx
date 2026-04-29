@@ -1,86 +1,66 @@
 import { Link } from 'react-router-dom'
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer className="bg-gradient-to-b from-dark to-dark-soft text-gray-400 pt-16 pb-8">
+    <footer className="bg-primary-dark text-tertiary/70 pt-12 pb-8 border-t border-secondary/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
           
           <div className="lg:col-span-1">
-            <p className="font-serif text-3xl text-white tracking-[0.15em] mb-4">
-              AURÉA
+            <p className="font-serif text-xl text-white tracking-[0.15em] mb-3">
+              DEDSHOP Market
             </p>
-            <p className="text-sm leading-relaxed mb-6 text-gray-400">
-              Des accessoires qui racontent votre histoire. Sélectionnés avec soin à Cotonou.
+            <p className="text-sm leading-relaxed mb-4 text-tertiary/60">
+              Vente en Gros et en détail des ustensiles de cuisine, les moules en silicone et les Gadgets
             </p>
-            {/* <a
-              href="https://wa.me/22900000000"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white text-sm rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105"
-            >
-              <i className="fab fa-whatsapp"></i>
-              Nous contacter sur WhatsApp
-            </a> */}
           </div>
 
           <div>
-            <h4 className="text-white text-xs tracking-widest uppercase mb-4 font-semibold">
+            <h4 className="text-white/80 text-xs tracking-widest uppercase mb-4 font-semibold">
               Navigation
             </h4>
-            <div className="flex flex-col gap-3">
-              <Link to="/" className="text-sm hover:text-gold transition-colors duration-300">Accueil</Link>
-              <Link to="/shop" className="text-sm hover:text-gold transition-colors duration-300">Boutique</Link>
-              <Link to="/about" className="text-sm hover:text-gold transition-colors duration-300">À propos</Link>
+            <div className="flex flex-col gap-2">
+              <Link to="/" className="text-sm text-tertiary/60 hover:text-secondary transition-colors duration-300">Accueil</Link>
+              <Link to="/shop" className="text-sm text-tertiary/60 hover:text-secondary transition-colors duration-300">Boutique</Link>
+              <Link to="/about" className="text-sm text-tertiary/60 hover:text-secondary transition-colors duration-300">À propos</Link>
             </div>
           </div>
 
           <div>
-            <h4 className="text-white text-xs tracking-widest uppercase mb-4 font-semibold">
+            <h4 className="text-white/80 text-xs tracking-widest uppercase mb-4 font-semibold">
               Catégories
             </h4>
-            <div className="flex flex-col gap-3">
-              {['Sacs & Pochettes', 'Bijoux & Parures', 'Foulards & Ceintures', 'Lunettes & Montres'].map(cat => (
-                <Link
-                  key={cat}
-                  to="/shop"
-                  className="text-sm hover:text-gold transition-colors duration-300"
-                >
-                  {cat}
-                </Link>
-              ))}
+            <div className="flex flex-col gap-2">
+              <Link to="/shop" className="text-sm text-tertiary/60 hover:text-secondary transition-colors duration-300">Ustensiles de cuisine</Link>
+              <Link to="/shop" className="text-sm text-tertiary/60 hover:text-secondary transition-colors duration-300">Moules en silicone</Link>
+              <Link to="/shop" className="text-sm text-tertiary/60 hover:text-secondary transition-colors duration-300">Gadgets</Link>
+              <Link to="/shop" className="text-sm text-tertiary/60 hover:text-secondary transition-colors duration-300">Accessoires</Link>
             </div>
           </div>
 
           <div>
-            <h4 className="text-white text-xs tracking-widest uppercase mb-4 font-semibold">
-              Contact
+            <h4 className="text-white/80 text-xs tracking-widest uppercase mb-4 font-semibold">
+              Horaires
             </h4>
-            <div className="flex flex-col gap-3 text-sm">
-              <p className="text-gray-400">
-                <i className="fas fa-map-marker-alt w-4 mr-2 text-gold"></i>
-                Cotonou, Benin
-              </p>
-              <p className="text-gray-400">
-                <i className="fas fa-envelope w-4 mr-2 text-gold"></i>
-                contact@aurea.bj
-              </p>
-              <p className="text-gray-400">
-                <i className="fas fa-phone w-4 mr-2 text-gold"></i>
-                +229 00 00 00 00
-              </p>
+            <div className="flex flex-col gap-2 text-sm">
+              <p className="text-tertiary/60">Lundi - Samedi: 8h - 20h</p>
+              <p className="text-tertiary/60">Dimanche: 9h - 13h</p>
+              <p className="text-tertiary/60">Livraison disponible</p>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-8">
-          <p className="text-center text-xs text-gray-600">
-            &copy; 2025 AURÉA — Tous droits reserves
+          <p className="text-center text-xs text-tertiary/50">
+            © {currentYear} DEDSHOP Market — Tous droits réservés
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-600 hover:text-gold transition-colors text-xs">CGV</a>
-            <a href="#" className="text-gray-600 hover:text-gold transition-colors text-xs">Mentions legales</a>
-            <a href="#" className="text-gray-600 hover:text-gold transition-colors text-xs">Politique de confidentialite</a>
+            <a href="#" className="text-tertiary/50 hover:text-secondary transition-colors text-xs">CGV</a>
+            <a href="#" className="text-tertiary/50 hover:text-secondary transition-colors text-xs">Mentions légales</a>
+            <a href="#" className="text-tertiary/50 hover:text-secondary transition-colors text-xs">Politique de confidentialité</a>
           </div>
         </div>
       </div>

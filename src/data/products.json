@@ -1,74 +1,74 @@
 [
   {
     "id": 1,
-    "nom": "Sac à main croco doré",
-    "prix": 89000,
-    "categorie": "sacs",
+    "nom": "Set de casseroles inox",
+    "prix": 35000,
+    "categorie": "ustensiles",
     "nouveaute": true,
-    "description": "Sac à main élégant en cuir synthétique motif croco, doré mat. Parfait pour toutes les occasions.",
-    "image": "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "description": "Set de 5 casseroles en inox 18/10, manches anti-brûlure",
+    "image": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     "id": 2,
-    "nom": "Collier perles dorées",
-    "prix": 24500,
-    "categorie": "bijoux",
+    "nom": "Moule silicone cupcakes",
+    "prix": 4500,
+    "categorie": "moules",
     "nouveaute": true,
-    "description": "Collier de perles dorées fait main, longueur réglable. Élégance naturelle.",
-    "image": "https://images.pexels.com/photos/248077/pexels-photo-248077.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "description": "Moule 12 empreintes, antiadhésif, alimentaire grade A",
+    "image": "https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     "id": 3,
-    "nom": "Foulard soie imprimé",
-    "prix": 18000,
-    "categorie": "foulards",
+    "nom": "Poêle antiadhésive",
+    "prix": 12500,
+    "categorie": "ustensiles",
     "nouveaute": false,
-    "description": "Foulard en soie légère aux motifs géométriques, polyvalent et chic.",
-    "image": "https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "description": "Poêle 28cm revêtement antiadhésive, fond épais",
+    "image": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     "id": 4,
-    "nom": "Lunettes soleil cat-eye",
-    "prix": 32000,
-    "categorie": "lunettes",
+    "nom": "Kit moules à cake",
+    "prix": 6800,
+    "categorie": "moules",
     "nouveaute": true,
-    "description": "Monture cat-eye vintage avec verres UV400. Style rétro intemporel.",
-    "image": "https://images.pexels.com/photos/701877/pexels-photo-701877.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "description": "Set de 3 moules à cake en silicone, couleurs assorties",
+    "image": "https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     "id": 5,
-    "nom": "Bracelet jonc argenté",
-    "prix": 15500,
-    "categorie": "bijoux",
+    "nom": "Coupe-légumes multifonction",
+    "prix": 8900,
+    "categorie": "gadgets",
     "nouveaute": false,
-    "description": "Bracelet jonc en acier inoxydable argenté, minimaliste et résistant.",
-    "image": "https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "description": "Coupe-légumes 8 fonctions, lame inox",
+    "image": "https://images.pexels.com/photos/3755701/pexels-photo-3755701.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     "id": 6,
-    "nom": "Sac pochette velours",
-    "prix": 42000,
-    "categorie": "sacs",
+    "nom": "Set de couteaux cuisine",
+    "prix": 18500,
+    "categorie": "ustensiles",
     "nouveaute": true,
-    "description": "Pochette en velours bordeaux avec chaîne dorée. Idéale pour les soirées.",
-    "image": "https://images.pexels.com/photos/904350/pexels-photo-904350.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "description": "Set de 6 couteaux professionnels avec bloc rangement",
+    "image": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     "id": 7,
-    "nom": "Ceinture cuir tressé",
-    "prix": 22000,
-    "categorie": "foulards",
+    "nom": "Moule à chocolat",
+    "prix": 3200,
+    "categorie": "moules",
     "nouveaute": false,
-    "description": "Ceinture en cuir véritable tressé, boucle dorée. Finition artisanale.",
-    "image": "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "description": "Moule silicone 24 cavités pour chocolat, bonbons",
+    "image": "https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     "id": 8,
-    "nom": "Montre dorée minimaliste",
-    "prix": 67000,
-    "categorie": "lunettes",
-    "nouveaute": true,
-    "description": "Montre à quartz cadran blanc, bracelet cuir camel. Design épuré et moderne.",
-    "image": "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "nom": "Presse-ail inox",
+    "prix": 4500,
+    "categorie": "gadgets",
+    "nouveaute": false,
+    "description": "Presse-ail professionnel, facile à nettoyer",
+    "image": "https://images.pexels.com/photos/3755701/pexels-photo-3755701.jpeg?auto=compress&cs=tinysrgb&w=600"
   }
 ]
