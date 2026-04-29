@@ -13,8 +13,8 @@
 
   body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #5c2e27 0%, #ff5e08 50%, #fdbd9e 100%);
-    color: #ffffff;
+    background: #fef9f0;
+    color: #1a1a1a;
     scroll-behavior: smooth;
     min-height: 100vh;
   }
@@ -31,16 +31,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #fdbd9e;
+    background: #e8e0d5;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #5c2e27;
+    background: #00ff01;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #ff5e08;
+    background: #00cc01;
   }
 
   .line-clamp-1 {

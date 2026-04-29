@@ -27,8 +27,7 @@ export default function WhatsAppButton() {
     >
       <i className="fab fa-whatsapp text-2xl group-hover:scale-110 transition-transform duration-300"></i>
       
-      {/* Tooltip Desktop */}
-      <span className="absolute right-full mr-3 bg-primary-dark text-white text-xs font-medium py-1.5 px-3 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hidden md:inline-block shadow-lg">
+      <span className="absolute right-full mr-3 bg-gray-900 text-white text-xs font-medium py-1.5 px-3 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hidden md:inline-block shadow-lg">
         WhatsApp
       </span>
     </a>

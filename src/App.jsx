@@ -30,8 +30,8 @@ function App() {
       <Navbar cartCount={cartCount} cartItems={cartItems} />
       <main className="flex-1">
         <Routes>
-          <Route path="/" element={<Home addToCart={addToCart} />} />
-          <Route path="/shop" element={<Shop addToCart={addToCart} />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>
