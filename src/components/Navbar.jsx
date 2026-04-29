@@ -181,20 +181,20 @@ export default function Navbar() {
       <div className="border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 h-16 sm:h-20 flex items-center justify-between">
           
-          {/* Logo à gauche */}
+          {/* Logo à gauche - version corrigée pour mobile */}
           <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
             <img 
               src="/logo.jpeg" 
               alt="DEDSHOP Market Logo" 
               className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
             />
-            <span className="font-['Roboto','sans-serif'] text-base sm:text-lg md:text-xl lg:text-2xl tracking-[0.15em] font-bold uppercase">
-              <span style={{ color: '#00ff01' }}>D</span>
-              <span style={{ color: '#ff5a00' }}>ED</span>
-              <span style={{ color: '#00ff01' }}>S</span>
-              <span style={{ color: '#ff5a00' }}>HOP </span>
-              <span style={{ color: '#00ff01' }}>M</span>
-              <span style={{ color: '#ff5a00' }}>ARKET</span>
+            <span className="font-['Roboto','sans-serif'] font-bold uppercase whitespace-nowrap">
+              <span style={{ color: '#00ff01', fontSize: 'clamp(14px, 4vw, 24px)' }}>D</span>
+              <span style={{ color: '#ff5a00', fontSize: 'clamp(14px, 4vw, 24px)' }}>ED</span>
+              <span style={{ color: '#00ff01', fontSize: 'clamp(14px, 4vw, 24px)' }}>S</span>
+              <span style={{ color: '#ff5a00', fontSize: 'clamp(14px, 4vw, 24px)' }}>HOP </span>
+              <span style={{ color: '#00ff01', fontSize: 'clamp(14px, 4vw, 24px)' }}>M</span>
+              <span style={{ color: '#ff5a00', fontSize: 'clamp(14px, 4vw, 24px)' }}>ARKET</span>
             </span>
           </Link>
 
