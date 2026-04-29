@@ -9,16 +9,16 @@ export default function Footer() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
           
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 text-center md:text-left">
             <p className="font-serif text-xl text-white tracking-[0.15em] mb-3">
               DEDSHOP Market
             </p>
-            <p className="text-sm leading-relaxed mb-4 text-tertiary/60">
+            <p className="text-sm leading-relaxed mb-4 text-tertiary/60 max-w-xs mx-auto md:mx-0">
               Vente en Gros et en détail des ustensiles de cuisine, les moules en silicone et les Gadgets
             </p>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-white/80 text-xs tracking-widest uppercase mb-4 font-semibold">
               Navigation
             </h4>
@@ -29,7 +29,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-white/80 text-xs tracking-widest uppercase mb-4 font-semibold">
               Catégories
             </h4>
@@ -41,7 +41,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-white/80 text-xs tracking-widest uppercase mb-4 font-semibold">
               Horaires
             </h4>
@@ -57,7 +57,7 @@ export default function Footer() {
           <p className="text-center text-xs text-tertiary/50">
             © {currentYear} DEDSHOP Market — Tous droits réservés
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-6 justify-center">
             <a href="#" className="text-tertiary/50 hover:text-secondary transition-colors text-xs">CGV</a>
             <a href="#" className="text-tertiary/50 hover:text-secondary transition-colors text-xs">Mentions légales</a>
             <a href="#" className="text-tertiary/50 hover:text-secondary transition-colors text-xs">Politique de confidentialité</a>
