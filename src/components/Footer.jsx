@@ -16,13 +16,13 @@ export default function Footer() {
                 alt="DEDSHOP Market Logo" 
                 className="w-10 h-10 object-contain rounded-lg"
               />
-              <p className="font-['Roboto','sans-serif'] font-bold uppercase whitespace-nowrap">
-                <span style={{ color: '#00ff01', fontSize: 'clamp(14px, 4vw, 20px)' }}>D</span>
-                <span style={{ color: '#ff5a00', fontSize: 'clamp(14px, 4vw, 20px)' }}>ED</span>
-                <span style={{ color: '#00ff01', fontSize: 'clamp(14px, 4vw, 20px)' }}>S</span>
-                <span style={{ color: '#ff5a00', fontSize: 'clamp(14px, 4vw, 20px)' }}>HOP </span>
-                <span style={{ color: '#00ff01', fontSize: 'clamp(14px, 4vw, 20px)' }}>M</span>
-                <span style={{ color: '#ff5a00', fontSize: 'clamp(14px, 4vw, 20px)' }}>ARKET</span>
+              <p className="font-['Roboto','sans-serif'] text-lg sm:text-xl font-bold uppercase tracking-normal whitespace-nowrap">
+                <span style={{ color: '#00ff01' }}>D</span>
+                <span style={{ color: '#ff5a00' }}>ED</span>
+                <span style={{ color: '#00ff01' }}>S</span>
+                <span style={{ color: '#ff5a00' }}>HOP </span>
+                <span style={{ color: '#00ff01' }}>M</span>
+                <span style={{ color: '#ff5a00' }}>ARKET</span>
               </p>
             </div>
             <p className="text-sm leading-relaxed mb-4 text-gray-500 max-w-xs mx-auto md:mx-0">
