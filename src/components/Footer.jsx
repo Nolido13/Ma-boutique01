@@ -16,62 +16,67 @@ export default function Footer() {
                 alt="DEDSHOP Market Logo" 
                 className="w-10 h-10 object-contain rounded-lg"
               />
-              <p className="font-serif text-xl text-primary-deep tracking-[0.15em]">
-                DEDSHOP Market
+              <p className="font-['Roboto','sans-serif'] text-xl tracking-[0.15em] font-bold uppercase">
+                <span style={{ color: '#00ff01' }}>D</span>
+                <span style={{ color: '#ff5a00' }}>ED</span>
+                <span style={{ color: '#00ff01' }}>S</span>
+                <span style={{ color: '#ff5a00' }}>HOP </span>
+                <span style={{ color: '#00ff01' }}>M</span>
+                <span style={{ color: '#ff5a00' }}>ARKET</span>
               </p>
             </div>
             <p className="text-sm leading-relaxed mb-4 text-gray-500 max-w-xs mx-auto md:mx-0">
-              Vente en Gros et en détail des ustensiles de cuisine, les moules en silicone et les Gadgets
+              VENTE EN GROS ET EN DÉTAIL DES USTENSILES DE CUISINE, LES MOULES EN SILICONE ET LES GADGETS
             </p>
           </div>
 
           <div className="text-center md:text-left">
             <h4 className="text-primary-deep text-xs tracking-widest uppercase mb-4 font-semibold">
-              Navigation
+              NAVIGATION
             </h4>
             <div className="flex flex-col gap-2">
-              <Link to="/" className="text-sm text-gray-500 hover:text-primary transition-colors duration-300">Accueil</Link>
-              <Link to="/shop" className="text-sm text-gray-500 hover:text-primary transition-colors duration-300">Boutique</Link>
-              <Link to="/about" className="text-sm text-gray-500 hover:text-primary transition-colors duration-300">À propos</Link>
+              <Link to="/" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300 uppercase">ACCUEIL</Link>
+              <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300 uppercase">BOUTIQUE</Link>
+              <Link to="/about" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300 uppercase">À PROPOS</Link>
             </div>
           </div>
 
           <div className="text-center md:text-left">
             <h4 className="text-primary-deep text-xs tracking-widest uppercase mb-4 font-semibold">
-              Catégories
+              CATÉGORIES
             </h4>
             <div className="flex flex-col gap-2">
-              <Link to="/shop" className="text-sm text-gray-500 hover:text-primary transition-colors duration-300">Ustensiles de cuisine</Link>
-              <Link to="/shop" className="text-sm text-gray-500 hover:text-primary transition-colors duration-300">Moules en silicone</Link>
-              <Link to="/shop" className="text-sm text-gray-500 hover:text-primary transition-colors duration-300">Gadgets</Link>
-              <Link to="/shop" className="text-sm text-gray-500 hover:text-primary transition-colors duration-300">Accessoires</Link>
+              <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300 uppercase">USTENSILES DE CUISINE</Link>
+              <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300 uppercase">MOULES EN SILICONE</Link>
+              <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300 uppercase">GADGETS</Link>
+              <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300 uppercase">ACCESSOIRES</Link>
             </div>
           </div>
 
           <div className="text-center md:text-left">
             <h4 className="text-primary-deep text-xs tracking-widest uppercase mb-4 font-semibold">
-              Horaires
+              HORAIRES
             </h4>
             <div className="flex flex-col gap-2 text-sm">
-              <p className="text-gray-500">Lundi - Samedi: 8h - 20h</p>
-              <p className="text-gray-500">Dimanche: 9h - 13h</p>
-              <p className="text-gray-500">Livraison disponible</p>
+              <p className="text-gray-500 uppercase">LUNDI - SAMEDI: 8H - 20H</p>
+              <p className="text-gray-500 uppercase">DIMANCHE: 9H - 13H</p>
+              <p className="text-gray-500 uppercase">LIVRAISON DISPONIBLE</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bandeau copyright - Couleur #e04e00 */}
+      {/* Bandeau copyright */}
       <div className="bg-[#e04e00] mt-8 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-center text-xs text-white/90">
-              © {currentYear} DEDSHOP Market — Tous droits réservés
+            <p className="text-center text-xs text-white/90 uppercase">
+              © {currentYear} DEDSHOP MARKET — TOUS DROITS RÉSERVÉS
             </p>
             <div className="flex gap-6 justify-center">
-              <a href="#" className="text-white/80 hover:text-white transition-colors text-xs">CGV</a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors text-xs">Mentions légales</a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors text-xs">Politique de confidentialité</a>
+              <a href="#" className="text-white/80 hover:text-white transition-colors text-xs uppercase">CGV</a>
+              <a href="#" className="text-white/80 hover:text-white transition-colors text-xs uppercase">MENTIONS LÉGALES</a>
+              <a href="#" className="text-white/80 hover:text-white transition-colors text-xs uppercase">POLITIQUE DE CONFIDENTIALITÉ</a>
             </div>
           </div>
         </div>
