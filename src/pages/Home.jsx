@@ -93,8 +93,8 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: 'truck', title: 'Livraison rapide', desc: 'Partout au Bénin' },
-              { icon: 'hand-holding-usd', title: 'Gros & Détail', desc: 'Prix compétitifs' },
+              { icon: 'truck', title: 'Livraison rapide', desc: 'Partout' },
+              { icon: 'hand-holding-usd', title: 'Gros & détail', desc: 'Prix compétitifs' },
               { icon: 'headset', title: 'Support 7j/7', desc: 'Service client dédié' },
             ].map((item, idx) => (
               <div 
@@ -138,7 +138,7 @@ export default function Home() {
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">WhatsApp</h3>
               <a href="https://wa.me/2290148225922" className="text-gray-600 hover:text-primary transition-colors">
-                229 01 48 22 59 22
+                01 48 22 59 22
               </a>
             </div>
             <div className="text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
@@ -146,8 +146,8 @@ export default function Home() {
                 <i className="fas fa-phone-alt text-3xl text-tertiary"></i>
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Appels</h3>
-              <a href="tel:+2290148225922" className="text-gray-600 hover:text-tertiary transition-colors">
-                229 01 48 22 59 22
+              <a href="tel:+2290162724401" className="text-gray-600 hover:text-tertiary transition-colors">
+                01 62 72 44 01
               </a>
             </div>
           </div>
