@@ -16,7 +16,17 @@ export default function Footer() {
                 alt="DEDSHOP Market Logo" 
                 className="w-10 h-10 object-contain rounded-lg"
               />
-              <p className="font-['Roboto','sans-serif'] text-lg sm:text-xl font-bold uppercase tracking-normal whitespace-nowrap">
+              {/* Version desktop - lettres séparées */}
+              <p className="hidden sm:block font-['Roboto','sans-serif'] text-lg sm:text-xl font-bold uppercase tracking-normal whitespace-nowrap">
+                <span style={{ color: '#00ff01' }}>D</span>
+                <span style={{ color: '#ff5a00' }}>ED</span>
+                <span style={{ color: '#00ff01' }}>S</span>
+                <span style={{ color: '#ff5a00' }}>HOP </span>
+                <span style={{ color: '#00ff01' }}>M</span>
+                <span style={{ color: '#ff5a00' }}>ARKET</span>
+              </p>
+              {/* Version mobile - texte compact */}
+              <p className="sm:hidden font-['Roboto','sans-serif'] text-base font-bold uppercase">
                 <span style={{ color: '#00ff01' }}>D</span>
                 <span style={{ color: '#ff5a00' }}>ED</span>
                 <span style={{ color: '#00ff01' }}>S</span>
@@ -50,6 +60,7 @@ export default function Footer() {
               <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Moules en silicone</Link>
               <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Gadgets</Link>
               <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Accessoires</Link>
+              <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Et plus...</Link>
             </div>
           </div>
 

@@ -177,13 +177,23 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 h-16 sm:h-20 flex items-center justify-between">
           
           {/* Logo à gauche */}
-          <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 group shrink-0">
             <img 
               src="/logo.jpeg" 
               alt="DEDSHOP Market Logo" 
               className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
             />
-            <span className="font-['Roboto','sans-serif'] text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase tracking-normal whitespace-nowrap">
+            {/* Version desktop - lettres séparées */}
+            <span className="hidden sm:inline font-['Roboto','sans-serif'] text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase tracking-normal whitespace-nowrap">
+              <span style={{ color: '#00ff01' }}>D</span>
+              <span style={{ color: '#ff5a00' }}>ED</span>
+              <span style={{ color: '#00ff01' }}>S</span>
+              <span style={{ color: '#ff5a00' }}>HOP </span>
+              <span style={{ color: '#00ff01' }}>M</span>
+              <span style={{ color: '#ff5a00' }}>ARKET</span>
+            </span>
+            {/* Version mobile - texte compact sans espacement */}
+            <span className="sm:hidden font-['Roboto','sans-serif'] text-base font-bold uppercase">
               <span style={{ color: '#00ff01' }}>D</span>
               <span style={{ color: '#ff5a00' }}>ED</span>
               <span style={{ color: '#00ff01' }}>S</span>
@@ -193,7 +203,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Liens centrés - PAS de flex-1 ici pour éviter le décalage */}
+          {/* Liens centrés */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
             <ul className="hidden md:flex gap-8 lg:gap-12 list-none">
               <li><NavLink to="/" className={navLinkClass}>Accueil</NavLink></li>
@@ -202,13 +212,13 @@ export default function Navbar() {
             </ul>
           </div>
 
-          {/* Espace vide à droite pour équilibrer (même largeur que le logo à gauche) */}
-          <div className="w-[120px] sm:w-[150px] md:w-[180px]"></div>
+          {/* Espace vide à droite pour équilibrer */}
+          <div className="w-[100px] sm:w-[150px] md:w-[180px] shrink-0"></div>
 
           {/* Menu Burger mobile */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden flex flex-col gap-1.5 p-2 sm:p-2.5 cursor-pointer group"
+            className="md:hidden flex flex-col gap-1.5 p-2 sm:p-2.5 cursor-pointer group shrink-0"
           >
             <span className={`block w-5 sm:w-6 h-0.5 bg-[#211000] rounded-full transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
             <span className={`block w-5 sm:w-6 h-0.5 bg-[#211000] rounded-full transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
