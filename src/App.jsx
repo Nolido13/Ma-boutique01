@@ -1,1 +1,31 @@
-<h1>Loading..</h1>
+import { useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import ProductGrid from './components/ProductGrid'
+import Footer from './components/Footer'
+import './index.css'
+
+function App() {
+  const [cartCount, setCartCount] = useState(0)
+  const [cartItems, setCartItems] = useState([])
+
+  const addToCart = (product) => {
+    setCartItems(prev => {
+      const existing = prev.find(i => i.id === product.id)
+      if (existing) return prev.map(i => i.id === product.id ? {...i, qty: i.qty + 1} : i)
+      return [...prev, {...product, qty: 1}]
+    })
+    setCartCount(c => c + 1)
+  }
+
+  return (
+    <div className="app">
+      <Navbar cartCount={cartCount} cartItems={cartItems} />
+      <Hero />
+      <ProductGrid addToCart={addToCart} />
+      <Footer />
+    </div>
+  )
+}
+
+export default App
