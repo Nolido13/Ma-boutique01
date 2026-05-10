@@ -1,10 +1,19 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import ImageCarousel from '../components/ImageCarousel'
+import { useCity } from '../context/CityContext'
 
 export default function Home() {
   const sectionsRef = useRef([])
   const currentYear = new Date().getFullYear()
+  const { mainCity, secondCity } = useCity()
+
+  // Fonction pour générer les liens avec le préfixe de la ville
+  const getCityPath = (path) => {
+    const citySlug = mainCity.urlSlug
+    if (path === '/') return `/${citySlug}`
+    return `/${citySlug}${path}`
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -63,7 +72,7 @@ export default function Home() {
           
           <div className="text-center mt-12 animate-fadeInUp">
             <Link 
-              to="/shop"
+              to={getCityPath('/shop')}
               className="inline-flex items-center gap-2 px-8 py-3 bg-tertiary text-white font-semibold text-sm tracking-widest rounded-lg hover:bg-tertiary-dark transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Découvrir la boutique
@@ -113,7 +122,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section contact */}
+      {/* Section contact - DYNAMIQUE AVEC addressDetail */}
       <section 
         ref={(el) => addToRefs(el, 2)}
         className="py-20 bg-beige opacity-0"
@@ -132,23 +141,79 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {/* WhatsApp - Ville principale */}
             <div className="text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fab fa-whatsapp text-3xl text-green-500"></i>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">WhatsApp</h3>
-              <a href="https://wa.me/2290148225922" className="text-gray-600 hover:text-primary transition-colors">
-                01 48 22 59 22
+              <h3 className="font-semibold text-gray-900 mb-2">WhatsApp {mainCity.name}</h3>
+              <a href={mainCity.whatsappLink} className="text-gray-600 hover:text-primary transition-colors">
+                {mainCity.whatsapp}
               </a>
+              <p className="text-xs text-gray-400 mt-2">
+                <i className="fas fa-map-marker-alt mr-1"></i>
+                {mainCity.address}
+              </p>
+              {/* addressDetail pour Calavi */}
+              {mainCity.addressDetail && mainCity.addressDetail !== '' && (
+                <p className="text-xs text-gray-400 mt-0.5">
+                  {mainCity.addressDetail}
+                </p>
+              )}
+              {/* Référence pour Porto-Novo */}
+              {mainCity.reference && !mainCity.addressDetail && (
+                <p className="text-xs text-gray-400 mt-0.5">
+                  Réf: {mainCity.reference}
+                </p>
+              )}
             </div>
+
+            {/* WhatsApp - Ville secondaire */}
             <div className="text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
               <div className="w-16 h-16 bg-tertiary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-phone-alt text-3xl text-tertiary"></i>
+                <i className="fab fa-whatsapp text-3xl text-green-500"></i>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Appels</h3>
-              <a href="tel:+2290162724401" className="text-gray-600 hover:text-tertiary transition-colors">
-                01 62 72 44 01
+              <h3 className="font-semibold text-gray-900 mb-2">WhatsApp {secondCity.name}</h3>
+              <a href={secondCity.whatsappLink} className="text-gray-600 hover:text-tertiary transition-colors">
+                {secondCity.whatsapp}
               </a>
+              <p className="text-xs text-gray-400 mt-2">
+                <i className="fas fa-map-marker-alt mr-1"></i>
+                {secondCity.address}
+              </p>
+              {/* addressDetail pour Calavi (si secondCity est Calavi) */}
+              {secondCity.addressDetail && secondCity.addressDetail !== '' && (
+                <p className="text-xs text-gray-400 mt-0.5">
+                  {secondCity.addressDetail}
+                </p>
+              )}
+              {/* Référence pour Porto-Novo (si secondCity est Porto-Novo) */}
+              {secondCity.reference && !secondCity.addressDetail && (
+                <p className="text-xs text-gray-400 mt-0.5">
+                  Réf: {secondCity.reference}
+                </p>
+              )}
+            </div>
+          </div>
+
+          {/* Ligne d'appel direct */}
+          <div className="text-center mt-8">
+            <div className="inline-block p-4 bg-white rounded-2xl shadow-md">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-tertiary/10 rounded-full flex items-center justify-center">
+                  <i className="fas fa-phone-alt text-tertiary text-lg"></i>
+                </div>
+                <div className="text-left">
+                  <p className="text-xs text-gray-400">Appel direct</p>
+                  <a href={mainCity.callLink} className="text-gray-600 hover:text-tertiary transition-colors font-semibold">
+                    {mainCity.call}
+                  </a>
+                  <p className="text-xs text-gray-400 mt-0.5">
+                    <i className="fas fa-map-marker-alt mr-1"></i>
+                    {mainCity.name}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

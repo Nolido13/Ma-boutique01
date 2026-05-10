@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react'
+import { useCity } from '../context/CityContext'
 
 export default function About() {
   const sectionsRef = useRef([])
+  const { mainCity, secondCity } = useCity()
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -29,6 +31,11 @@ export default function About() {
     if (el && !sectionsRef.current.includes(el)) {
       sectionsRef.current[index] = el
     }
+  }
+
+  // Déterminer la couleur en fonction de la ville
+  const getCityColor = (cityName) => {
+    return cityName === 'Calavi' ? 'primary' : 'tertiary'
   }
 
   return (
@@ -105,7 +112,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* Section 3 - Nos boutiques */}
+      {/* Section 3 - Nos boutiques (ordre dynamique) */}
       <div 
         ref={(el) => addToRefs(el, 2)}
         className="py-20 bg-cream opacity-0"
@@ -124,42 +131,59 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Boutique Calavi */}
-            <div className="bg-white rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border border-primary/20">
-              <div className="flex items-center gap-3 mb-4">
-                <i className="fas fa-map-marker-alt text-primary text-2xl"></i>
-                <h3 className="font-serif text-xl text-gray-900">Boutique Calavi</h3>
+            {/* Boutique PRINCIPALE - celle de la ville sélectionnée (en premier) */}
+            <div className={`bg-white rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border-l-8 border-${getCityColor(mainCity.name)} shadow-lg relative`}>
+              <div className={`absolute -top-3 left-6 bg-${getCityColor(mainCity.name)} text-white text-xs px-3 py-1 rounded-full`}>
+                ⭐ Boutique principale ({mainCity.name})
               </div>
-              <p className="text-gray-600">Tankpè Von de la buvette Parana</p>
-              <p className="text-gray-600 mb-4">Boutique en face de l'école primaire les génies</p>
+              <div className="flex items-center gap-3 mb-4 mt-4">
+                <i className={`fas fa-map-marker-alt text-${getCityColor(mainCity.name)} text-2xl`}></i>
+                <h3 className="font-serif text-xl text-gray-900">Boutique {mainCity.name}</h3>
+              </div>
+              <p className="text-gray-600">{mainCity.address}</p>
+              {mainCity.addressDetail && <p className="text-gray-600 mb-4">{mainCity.addressDetail}</p>}
+              {mainCity.reference && <p className="text-gray-600 mb-4">Référence: {mainCity.reference}</p>}
               <div className="flex items-center gap-3">
                 <i className="fab fa-whatsapp text-green-500"></i>
-                <span className="text-gray-600">01 48 22 59 22</span>
+                <span className="text-gray-600">{mainCity.whatsapp}</span>
+              </div>
+              <div className="flex items-center gap-3 mt-2">
+                <i className="fab fa-tiktok text-black"></i>
+                <a href={mainCity.tiktok} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                  @{mainCity.name === 'Calavi' ? 'ded_chop.2' : 'ded_shop.1'}
+                </a>
               </div>
               <div className="mt-3 pt-3 border-t border-gray-200">
                 <p className="text-sm text-gray-500">
-                  <i className="far fa-clock mr-2 text-primary"></i>
-                  Horaires: 7h30 - 20h30 (Lundi - Samedi)
+                  <i className={`far fa-clock mr-2 text-${getCityColor(mainCity.name)}`}></i>
+                  Horaires: {mainCity.horaires} (Lundi - Samedi)
                 </p>
               </div>
             </div>
 
-            {/* Boutique Porto-Novo */}
-            <div className="bg-white rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border border-tertiary/20">
+            {/* Boutique SECONDAIRE - l'autre ville */}
+            <div className={`bg-white rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border border-${getCityColor(secondCity.name)}/30 opacity-90 hover:opacity-100`}>
               <div className="flex items-center gap-3 mb-4">
-                <i className="fas fa-map-marker-alt text-tertiary text-2xl"></i>
-                <h3 className="font-serif text-xl text-gray-900">Boutique Porto-Novo</h3>
+                <i className={`fas fa-map-marker-alt text-${getCityColor(secondCity.name)} text-2xl`}></i>
+                <h3 className="font-serif text-xl text-gray-900">Boutique {secondCity.name}</h3>
               </div>
-              <p className="text-gray-600">Quartier Kandevié</p>
-              <p className="text-gray-600 mb-4">Référence: 0195923397</p>
+              <p className="text-gray-600">{secondCity.address}</p>
+              {secondCity.addressDetail && <p className="text-gray-600 mb-4">{secondCity.addressDetail}</p>}
+              {secondCity.reference && <p className="text-gray-600 mb-4">Référence: {secondCity.reference}</p>}
               <div className="flex items-center gap-3">
                 <i className="fab fa-whatsapp text-green-500"></i>
-                <span className="text-gray-600">62 72 44 01</span>
+                <span className="text-gray-600">{secondCity.whatsapp}</span>
+              </div>
+              <div className="flex items-center gap-3 mt-2">
+                <i className="fab fa-tiktok text-black"></i>
+                <a href={secondCity.tiktok} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                  @{secondCity.name === 'Calavi' ? 'ded_chop.2' : 'ded_shop.1'}
+                </a>
               </div>
               <div className="mt-3 pt-3 border-t border-gray-200">
                 <p className="text-sm text-gray-500">
-                  <i className="far fa-clock mr-2 text-tertiary"></i>
-                  Horaires: 7h30 - 20h30 (Lundi - Samedi)
+                  <i className={`far fa-clock mr-2 text-${getCityColor(secondCity.name)}`}></i>
+                  Horaires: {secondCity.horaires} (Lundi - Samedi)
                 </p>
               </div>
             </div>

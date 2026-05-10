@@ -1,7 +1,16 @@
 import { Link } from 'react-router-dom'
+import { useCity } from '../context/CityContext'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const { mainCity } = useCity()
+
+  // Fonction pour générer les liens avec le préfixe de la ville
+  const getCityPath = (path) => {
+    const citySlug = mainCity.urlSlug
+    if (path === '/') return `/${citySlug}`
+    return `/${citySlug}${path}`
+  }
 
   return (
     <footer className="bg-cream text-gray-600 pt-12">
@@ -16,23 +25,13 @@ export default function Footer() {
                 alt="DEDSHOP Market Logo" 
                 className="w-10 h-10 object-contain rounded-lg"
               />
-              {/* Version desktop - lettres séparées */}
+              {/* Version desktop - tout en orange */}
               <p className="hidden sm:block font-['Roboto','sans-serif'] text-lg sm:text-xl font-bold uppercase tracking-normal whitespace-nowrap">
-                <span style={{ color: '#00ff01' }}>D</span>
-                <span style={{ color: '#ff5a00' }}>ED</span>
-                <span style={{ color: '#00ff01' }}>S</span>
-                <span style={{ color: '#ff5a00' }}>HOP </span>
-                <span style={{ color: '#00ff01' }}>M</span>
-                <span style={{ color: '#ff5a00' }}>ARKET</span>
+                <span style={{ color: '#ff5a00' }}>DEDSHOP MARKET</span>
               </p>
-              {/* Version mobile - texte compact */}
+              {/* Version mobile - tout en orange */}
               <p className="sm:hidden font-['Roboto','sans-serif'] text-base font-bold uppercase">
-                <span style={{ color: '#00ff01' }}>D</span>
-                <span style={{ color: '#ff5a00' }}>ED</span>
-                <span style={{ color: '#00ff01' }}>S</span>
-                <span style={{ color: '#ff5a00' }}>HOP </span>
-                <span style={{ color: '#00ff01' }}>M</span>
-                <span style={{ color: '#ff5a00' }}>ARKET</span>
+                <span style={{ color: '#ff5a00' }}>DEDSHOP MARKET</span>
               </p>
             </div>
             <p className="text-sm leading-relaxed mb-4 text-gray-500 max-w-xs mx-auto md:mx-0">
@@ -45,9 +44,9 @@ export default function Footer() {
               Navigation
             </h4>
             <div className="flex flex-col gap-2">
-              <Link to="/" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Accueil</Link>
-              <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Boutique</Link>
-              <Link to="/about" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">À propos</Link>
+              <Link to={getCityPath('/')} className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Accueil</Link>
+              <Link to={getCityPath('/shop')} className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Boutique</Link>
+              <Link to={getCityPath('/about')} className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">À propos</Link>
             </div>
           </div>
 
@@ -56,11 +55,11 @@ export default function Footer() {
               Catégories
             </h4>
             <div className="flex flex-col gap-2">
-              <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Ustensiles de cuisine</Link>
-              <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Moules en silicone</Link>
-              <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Gadgets</Link>
-              <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Accessoires</Link>
-              <Link to="/shop" className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Et plus...</Link>
+              <Link to={getCityPath('/shop')} className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Ustensiles de cuisine</Link>
+              <Link to={getCityPath('/shop')} className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Moules en silicone</Link>
+              <Link to={getCityPath('/shop')} className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Gadgets</Link>
+              <Link to={getCityPath('/shop')} className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Accessoires</Link>
+              <Link to={getCityPath('/shop')} className="text-sm text-gray-500 hover:text-tertiary transition-colors duration-300">Et plus...</Link>
             </div>
           </div>
 
