@@ -49,7 +49,7 @@ function App() {
         <WhatsAppButton />
         <CallButton />
         <TikTokButton />
-        <SwitchButton />
+        {/* <SwitchButton /> */}
       </div>
     </CityProvider>
   )
